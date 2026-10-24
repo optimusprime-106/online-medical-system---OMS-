@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctor Portal — Meridian Health</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 32 32" fill="none">
+        <rect width="32" height="32" rx="9" fill="#1F5C4E"/>
+        <path d="M6 17h4l2.5-7 4 14 2.5-7H26" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      Meridian <span style="color:var(--ink-faint); font-weight:600; font-size:13px; margin-left:4px;">for doctors</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="doctor-dashboard.html" class="active">Doctor Portal</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="login.html?role=doctor" class="btn btn-ghost btn-sm" data-logout-link>Log out</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="row g-0 dash-shell" data-doctor-dashboard>
+  <aside class="col-12 col-lg-2 dash-sidebar">
+    <div class="dash-profile">
+      <div class="avatar">AO</div>
+      <div>
+        <strong>Dr. Amara Osei</strong>
+        <span>Cardiology · License #MH-4471</span>
+      </div>
+    </div>
+    <nav class="dash-nav">
+      <button type="button" class="active" data-dash-nav="requests">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Appointment requests
+        <span class="badge" data-pending-count>0</span>
+      </button>
+      <button type="button" data-dash-nav="schedule">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        Accepted &amp; prescriptions
+      </button>
+      <button type="button" data-dash-nav="profile">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+        Availability &amp; profile
+      </button>
+    </nav>
+  </aside>
+
+  <main class="col-12 col-lg-10 dash-main" id="main">
+
+    <div class="doctor-status-bar">
+      <span class="lbl">Accepting new appointments</span>
+      <label class="mh-switch">
+        <input type="checkbox" data-availability-toggle checked>
+        <span class="track"></span>
+      </label>
+      <span class="current-status available" data-availability-label>Available</span>
+    </div>
+
+    <!-- APPOINTMENT REQUESTS -->
+    <div class="dash-panel active" data-dash-panel="requests">
+      <div class="dash-topbar">
+        <div><h1>Appointment requests</h1><p class="sub">Accept or decline incoming bookings from patients.</p></div>
+      </div>
+      <div class="card panel-card">
+        <div class="head"><h3>Pending</h3></div>
+        <div data-requests-pending></div>
+      </div>
+      <div class="card panel-card" style="margin-top:22px;">
+        <div class="head"><h3>Accepted &amp; declined history</h3></div>
+        <div data-requests-history></div>
+      </div>
+    </div>
+
+    <!-- ACCEPTED / PRESCRIPTIONS -->
+    <div class="dash-panel" data-dash-panel="schedule">
+      <div class="dash-topbar">
+        <div><h1>Accepted visits</h1><p class="sub">Write and send a prescription once a visit is complete.</p></div>
+      </div>
+      <div class="card panel-card">
+        <div data-accepted-list></div>
+      </div>
+    </div>
+
+    <!-- PROFILE -->
+    <div class="dash-panel" data-dash-panel="profile">
+      <div class="dash-topbar">
+        <div><h1>Availability &amp; profile</h1><p class="sub">Patients only see open slots while you're marked available.</p></div>
+      </div>
+      <div class="card panel-card" style="max-width:560px;">
+        <div class="field"><label for="d-name">Full name</label><input class="form-control" type="text" id="d-name" value="Dr. Amara Osei" autocomplete="name"><span class="error-msg">Please enter your full name.</span></div>
+        <div class="field"><label for="d-spec">Specialty</label><input class="form-control" type="text" id="d-spec" value="Cardiology"><span class="error-msg">Please enter your specialty.</span></div>
+        <div class="field"><label for="d-fee">Consultation fee (INR)</label><input class="form-control" type="number" id="d-fee" value="60" min="0"><span class="error-msg">Enter a valid fee (0 or more).</span></div>
+        <div class="field">
+          <label for="d-status">Availability status</label>
+          <select class="form-select" id="d-status" data-availability-select>
+            <option value="available">Available for bookings</option>
+            <option value="unavailable">Not available right now</option>
+          </select>
+        </div>
+        <div class="form-save-row">
+          <button type="button" class="btn btn-primary" data-save-profile>Save changes</button>
+          <span class="save-status" data-save-status role="status" aria-live="polite"></span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- PRESCRIPTION MODAL -->
+<div class="modal fade" id="rxModal" tabindex="-1" aria-labelledby="rxModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="position:absolute; top:18px; right:18px; z-index:2;"></button>
+      <div class="modal-body">
+        <h3 id="rxModalLabel" class="rx-modal-title">Write prescription</h3>
+        <p class="rx-modal-sub" data-rx-modal-sub></p>
+        <div class="rx-form" data-rx-form>
+          <div data-rx-med-rows></div>
+          <button type="button" class="rx-add-row" data-rx-add-row>+ Add medicine</button>
+          <div class="field">
+            <label for="rx-notes">Doctor's notes <span class="hint">(optional)</span></label>
+            <textarea class="form-control" id="rx-notes" placeholder="Advice, follow-up instructions, precautions..."></textarea>
+          </div>
+          <div class="rx-notice" data-rx-notice style="display:none;"></div>
+          <div class="form-nav" style="margin-top:6px;">
+            <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary" data-rx-send>Send prescription to patient</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="data.js"></script>
+<script src="doctor-dashboard.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

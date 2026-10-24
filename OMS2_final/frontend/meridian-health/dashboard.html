@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Meridian Health</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 32 32" fill="none">
+        <rect width="32" height="32" rx="9" fill="#1F5C4E"/>
+        <path d="M6 17h4l2.5-7 4 14 2.5-7H26" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      Meridian
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="doctors.html">Doctors</a></li>
+      <li><a href="pharmacy.html">Pharmacy</a></li>
+      <li><a href="dashboard.html" class="active">Dashboard</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="login.html" class="btn btn-ghost btn-sm" data-logout-link>Log out</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="row g-0 dash-shell" data-dashboard>
+  <aside class="col-12 col-lg-2 dash-sidebar">
+    <div class="dash-profile">
+      <div class="avatar" data-user-avatar>JT</div>
+      <div>
+        <strong data-user-name>Jordan Taylor</strong>
+        <span data-user-id>Patient ID #MH-30291</span>
+      </div>
+    </div>
+    <nav class="dash-nav" role="tablist" aria-label="Dashboard sections" aria-orientation="vertical">
+      <button type="button" id="dnav-overview" class="active" role="tab" aria-selected="true" aria-controls="dpanel-overview" data-dash-nav="overview">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+        Overview
+      </button>
+      <button type="button" id="dnav-appointments" role="tab" aria-selected="false" aria-controls="dpanel-appointments" tabindex="-1" data-dash-nav="appointments">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Appointments
+        <span class="badge" aria-label="2 upcoming">2</span>
+      </button>
+      <button type="button" id="dnav-prescriptions" role="tab" aria-selected="false" aria-controls="dpanel-prescriptions" tabindex="-1" data-dash-nav="prescriptions">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6l1 4H8l1-4Z"/><path d="M8 7v9a5 5 0 0 0 10 0V7"/></svg>
+        Prescriptions
+      </button>
+      <button type="button" id="dnav-vitals" role="tab" aria-selected="false" aria-controls="dpanel-vitals" tabindex="-1" data-dash-nav="vitals">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+        Vitals
+      </button>
+      <button type="button" id="dnav-records" role="tab" aria-selected="false" aria-controls="dpanel-records" tabindex="-1" data-dash-nav="records">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg>
+        Records
+      </button>
+      <button type="button" id="dnav-profile" role="tab" aria-selected="false" aria-controls="dpanel-profile" tabindex="-1" data-dash-nav="profile">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+        Profile
+      </button>
+    </nav>
+  </aside>
+
+  <main class="col-12 col-lg-10 dash-main" id="main">
+
+    <!-- OVERVIEW -->
+    <div class="dash-panel active" id="dpanel-overview" role="tabpanel" aria-labelledby="dnav-overview" tabindex="-1" data-dash-panel="overview">
+      <div class="dash-topbar">
+        <div>
+          <h1 data-user-welcome>Welcome back, Jordan.</h1>
+          <p class="sub">Here's what's happening with your care this week.</p>
+        </div>
+        <a href="appointment.html" class="btn btn-primary">Book new appointment</a>
+      </div>
+
+      <div class="row g-3 stat-row">
+        <div class="col-6 col-lg-3">
+        <div class="card stat-card">
+          <div class="top"><div class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><span class="delta">Next: Fri</span></div>
+          <strong>2</strong>
+          <span class="lbl">Upcoming appointments</span>
+        </div>
+        </div>
+        <div class="col-6 col-lg-3">
+        <div class="card stat-card">
+          <div class="top"><div class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6l1 4H8l1-4Z"/><path d="M8 7v9a5 5 0 0 0 10 0V7"/></svg></div><span class="delta">1 due soon</span></div>
+          <strong>3</strong>
+          <span class="lbl">Active prescriptions</span>
+        </div>
+        </div>
+        <div class="col-6 col-lg-3">
+        <div class="card stat-card">
+          <div class="top"><div class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><span class="delta">Normal</span></div>
+          <strong>72</strong>
+          <span class="lbl">Resting heart rate</span>
+        </div>
+        </div>
+        <div class="col-6 col-lg-3">
+        <div class="card stat-card">
+          <div class="top"><div class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg></div><span class="delta down">Since 2022</span></div>
+          <strong>14</strong>
+          <span class="lbl">Total visit records</span>
+        </div>
+        </div>
+      </div>
+
+      <div class="row g-3 dash-grid">
+        <div class="col-12 col-lg-7">
+        <div class="card panel-card">
+          <div class="head"><h3>Upcoming appointments</h3><a href="#" onclick="document.querySelector('[data-dash-nav=appointments]').click(); return false;">View all</a></div>
+          <div class="appt-row">
+            <div class="date-badge"><span class="m">Jul</span><span class="d">18</span></div>
+            <div class="info"><h4>Dr. Amara Osei — Cardiology</h4><span>Friday, 4:30 PM · Video visit</span></div>
+            <span class="status confirmed">Confirmed</span>
+          </div>
+          <div class="appt-row">
+            <div class="date-badge"><span class="m">Jul</span><span class="d">24</span></div>
+            <div class="info"><h4>Dr. Daniel Kim — Dentistry</h4><span>Thursday, 9:15 AM · In person</span></div>
+            <span class="status pending">Pending</span>
+          </div>
+        </div>
+        </div>
+
+        <div class="col-12 col-lg-5">
+        <div class="card panel-card">
+          <div class="head"><h3>Key vitals</h3><a href="#" onclick="document.querySelector('[data-dash-nav=vitals]').click(); return false;">Details</a></div>
+          <div class="vital-item">
+            <div class="top"><span>Blood pressure</span><strong>118/76</strong></div>
+            <div class="bar-track" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Blood pressure" aria-valuetext="118/76"><div class="bar-fill" style="width:70%"></div></div>
+          </div>
+          <div class="vital-item">
+            <div class="top"><span>Resting heart rate</span><strong>72 bpm</strong></div>
+            <div class="bar-track" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="Resting heart rate" aria-valuetext="72 bpm"><div class="bar-fill" style="width:60%"></div></div>
+          </div>
+          <div class="vital-item">
+            <div class="top"><span>Sleep average</span><strong>6.4 hrs</strong></div>
+            <div class="bar-track" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" aria-label="Sleep average" aria-valuetext="6.4 hrs"><div class="bar-fill amber" style="width:45%"></div></div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="card panel-card">
+        <div class="head"><h3>Active prescriptions</h3><a href="#" onclick="document.querySelector('[data-dash-nav=prescriptions]').click(); return false;">View all</a></div>
+        <div class="rx-row">
+          <div class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6l1 4H8l1-4Z"/><path d="M8 7v9a5 5 0 0 0 10 0V7"/></svg></div>
+          <div class="info"><h4>Atorvastatin 10mg</h4><span>1 tablet nightly · 12 refills left</span></div>
+        </div>
+        <div class="rx-row">
+          <div class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6l1 4H8l1-4Z"/><path d="M8 7v9a5 5 0 0 0 10 0V7"/></svg></div>
+          <div class="info"><h4>Cetirizine 10mg</h4><span>As needed for allergies · 4 refills left</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- APPOINTMENTS -->
+    <div class="dash-panel" id="dpanel-appointments" role="tabpanel" aria-labelledby="dnav-appointments" tabindex="-1" data-dash-panel="appointments">
+      <div class="dash-topbar">
+        <div><h1>Appointments</h1><p class="sub">Everything upcoming and past, in one place.</p></div>
+        <a href="appointment.html" class="btn btn-primary">Book new appointment</a>
+      </div>
+      <div class="card panel-card">
+        <div class="head"><h3>Upcoming</h3></div>
+        <div class="appt-row">
+          <div class="date-badge"><span class="m">Jul</span><span class="d">18</span></div>
+          <div class="info"><h4>Dr. Amara Osei — Cardiology</h4><span>Friday, 4:30 PM · Video visit</span></div>
+          <span class="status confirmed">Confirmed</span>
+          <button type="button" class="btn btn-ghost btn-sm" data-cancel-appt style="margin-left:14px;">Cancel</button>
+        </div>
+        <div class="appt-row">
+          <div class="date-badge"><span class="m">Jul</span><span class="d">24</span></div>
+          <div class="info"><h4>Dr. Daniel Kim — Dentistry</h4><span>Thursday, 9:15 AM · In person</span></div>
+          <span class="status pending">Pending</span>
+          <button type="button" class="btn btn-ghost btn-sm" data-cancel-appt style="margin-left:14px;">Cancel</button>
+        </div>
+      </div>
+      <div class="card panel-card" data-dynamic-appts-card style="display:none;">
+        <div class="head"><h3>Recently booked</h3></div>
+        <div data-dynamic-appts></div>
+      </div>
+
+      <div class="card panel-card" style="margin-top:22px;">
+        <div class="head"><h3>Past visits</h3></div>
+        <table class="dash-table" data-sortable>
+          <thead><tr><th data-sort-key="text">Doctor</th><th data-sort-key="text">Specialty</th><th data-sort-key="date">Date</th><th data-sort-key="text">Status</th></tr></thead>
+          <tbody>
+            <tr><td>Dr. Lena Voss</td><td>Pediatrics</td><td>Jun 2, 2026</td><td><span class="status confirmed">Completed</span></td></tr>
+            <tr><td>Dr. James Whitfield</td><td>General Medicine</td><td>Apr 19, 2026</td><td><span class="status confirmed">Completed</span></td></tr>
+            <tr><td>Dr. Sofia Alvarez</td><td>Gynecology</td><td>Feb 8, 2026</td><td><span class="status confirmed">Completed</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PRESCRIPTIONS -->
+    <div class="dash-panel" id="dpanel-prescriptions" role="tabpanel" aria-labelledby="dnav-prescriptions" tabindex="-1" data-dash-panel="prescriptions">
+      <div class="dash-topbar">
+        <div><h1>Prescriptions</h1><p class="sub">Current medications and refill status.</p></div>
+      </div>
+      <div class="card panel-card">
+        <div class="rx-row">
+          <div class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6l1 4H8l1-4Z"/><path d="M8 7v9a5 5 0 0 0 10 0V7"/></svg></div>
+          <div class="info"><h4>Atorvastatin 10mg</h4><span>Prescribed by Dr. Amara Osei · 1 tablet nightly · 12 refills left</span></div>
+        </div>
+        <div class="rx-row">
+          <div class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6l1 4H8l1-4Z"/><path d="M8 7v9a5 5 0 0 0 10 0V7"/></svg></div>
+          <div class="info"><h4>Cetirizine 10mg</h4><span>Prescribed by Dr. James Whitfield · As needed for allergies · 4 refills left</span></div>
+        </div>
+        <div class="rx-row">
+          <div class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6l1 4H8l1-4Z"/><path d="M8 7v9a5 5 0 0 0 10 0V7"/></svg></div>
+          <div class="info"><h4>Amoxicillin 500mg</h4><span>Prescribed by Dr. James Whitfield · Course completed · 0 refills left</span></div>
+        </div>
+      </div>
+
+      <div class="card panel-card" data-dynamic-rx-card style="display:none; margin-top:22px;">
+        <div class="head"><h3>From your recent visits</h3></div>
+        <div data-dynamic-rx></div>
+      </div>
+    </div>
+
+    <!-- VITALS -->
+    <div class="dash-panel" id="dpanel-vitals" role="tabpanel" aria-labelledby="dnav-vitals" tabindex="-1" data-dash-panel="vitals">
+      <div class="dash-topbar">
+        <div><h1>Vitals</h1><p class="sub">Latest readings from your recent visits.</p></div>
+      </div>
+      <div class="row g-3 dash-grid">
+        <div class="col-12 col-lg-7">
+        <div class="card panel-card">
+          <div class="head"><h3>This month</h3></div>
+          <div class="vital-item">
+            <div class="top"><span>Blood pressure</span><strong>118/76 mmHg</strong></div>
+            <div class="bar-track" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Blood pressure" aria-valuetext="118/76 mmHg"><div class="bar-fill" style="width:70%"></div></div>
+          </div>
+          <div class="vital-item">
+            <div class="top"><span>Resting heart rate</span><strong>72 bpm</strong></div>
+            <div class="bar-track" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="Resting heart rate" aria-valuetext="72 bpm"><div class="bar-fill" style="width:60%"></div></div>
+          </div>
+          <div class="vital-item">
+            <div class="top"><span>Blood oxygen</span><strong>98%</strong></div>
+            <div class="bar-track" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" aria-label="Blood oxygen" aria-valuetext="98%"><div class="bar-fill" style="width:98%"></div></div>
+          </div>
+          <div class="vital-item">
+            <div class="top"><span>Sleep average</span><strong>6.4 hrs</strong></div>
+            <div class="bar-track" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" aria-label="Sleep average" aria-valuetext="6.4 hrs"><div class="bar-fill amber" style="width:45%"></div></div>
+          </div>
+          <div class="vital-item">
+            <div class="top"><span>Weight</span><strong>168 lbs</strong></div>
+            <div class="bar-track" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" aria-label="Weight" aria-valuetext="168 lbs"><div class="bar-fill amber" style="width:55%"></div></div>
+          </div>
+        </div>
+        </div>
+        <div class="col-12 col-lg-5">
+        <div class="card panel-card">
+          <div class="head"><h3>Notes</h3></div>
+          <p style="font-size:14px; color:var(--ink-soft); line-height:1.7;">Vitals are logged automatically after each in-person visit. Your resting heart rate and blood pressure remain within a healthy range. Sleep average has trended slightly below target — this was flagged by Dr. Osei at your last visit.</p>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECORDS -->
+    <div class="dash-panel" id="dpanel-records" role="tabpanel" aria-labelledby="dnav-records" tabindex="-1" data-dash-panel="records">
+      <div class="dash-topbar">
+        <div><h1>Records</h1><p class="sub">Visit summaries and shared documents.</p></div>
+      </div>
+      <div class="card panel-card">
+        <table class="dash-table" data-sortable>
+          <thead><tr><th data-sort-key="text">Document</th><th data-sort-key="text">From</th><th data-sort-key="date">Date</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>Annual check-up summary</td><td>Dr. James Whitfield</td><td>Apr 19, 2026</td><td><button type="button" class="btn btn-ghost btn-sm" data-view-doc data-doc-title="Annual check-up summary" data-doc-from="Dr. James Whitfield" data-doc-date="Apr 19, 2026">View</button></td></tr>
+            <tr><td>Bloodwork results</td><td>Northfield Labs</td><td>Apr 19, 2026</td><td><button type="button" class="btn btn-ghost btn-sm" data-view-doc data-doc-title="Bloodwork results" data-doc-from="Northfield Labs" data-doc-date="Apr 19, 2026">View</button></td></tr>
+            <tr><td>Pediatric growth chart</td><td>Dr. Lena Voss</td><td>Jun 2, 2026</td><td><button type="button" class="btn btn-ghost btn-sm" data-view-doc data-doc-title="Pediatric growth chart" data-doc-from="Dr. Lena Voss" data-doc-date="Jun 2, 2026">View</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PROFILE -->
+    <div class="dash-panel" id="dpanel-profile" role="tabpanel" aria-labelledby="dnav-profile" tabindex="-1" data-dash-panel="profile">
+      <div class="dash-topbar">
+        <div><h1>Profile</h1><p class="sub">Keep your details current so care stays accurate.</p></div>
+      </div>
+      <div class="card panel-card" style="max-width:560px;">
+        <div class="field"><label for="p-name">Full name</label><input class="form-control" type="text" id="p-name" value="Jordan Taylor" autocomplete="name" data-user-name-input><span class="error-msg">Please enter your full name.</span></div>
+        <div class="field"><label for="p-email">Email address</label><input class="form-control" type="email" id="p-email" value="jordan.taylor@email.com" autocomplete="email" data-user-email-input><span class="error-msg">Please enter a valid email address.</span></div>
+        <div class="field"><label for="p-phone">Phone number</label><input class="form-control" type="tel" id="p-phone" value="(555) 123-4567" autocomplete="tel"><span class="error-msg">Enter a valid phone number.</span></div>
+        <div class="field"><label for="p-dob">Date of birth</label><input class="form-control" type="date" id="p-dob" value="1994-03-12"><span class="error-msg">Please enter your date of birth.</span></div>
+        <div class="field"><label for="p-insurance">Insurance provider</label><input class="form-control" type="text" id="p-insurance" value="Bluewell Health Plan"></div>
+        <div class="form-save-row">
+          <button type="button" class="btn btn-primary" data-save-profile>Save changes</button>
+          <span class="save-status" data-save-status role="status" aria-live="polite"></span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<div class="modal fade" id="docPreviewModal" tabindex="-1" aria-labelledby="docPreviewLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content mh-modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="docPreviewLabel" data-doc-preview-title>Document</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="sub" style="margin-bottom:18px;"><span data-doc-preview-from></span> · <span data-doc-preview-date></span></p>
+        <div class="doc-preview-placeholder">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg>
+          <p>Full document preview isn't available in this demo. In production this would show the original file inline.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="data.js"></script>
+<script src="pdf-utils.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

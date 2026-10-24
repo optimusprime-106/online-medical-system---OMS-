@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book an Appointment — Meridian Health</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 32 32" fill="none">
+        <rect width="32" height="32" rx="9" fill="#1F5C4E"/>
+        <path d="M6 17h4l2.5-7 4 14 2.5-7H26" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      Meridian
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="doctors.html">Doctors</a></li>
+      <li><a href="pharmacy.html">Pharmacy</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="login.html?role=doctor" class="nav-doctor-link">Doctor login</a>
+      <a href="login.html" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="login.html?tab=register" class="btn btn-primary btn-sm">Get started</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="page-header" id="main">
+  <div class="container">
+    <span class="eyebrow">Booking</span>
+    <h1>Let's get your visit scheduled.</h1>
+    <p class="sub">Five quick steps — specialty, doctor, time, your details, and payment.</p>
+  </div>
+</header>
+
+<section class="container" data-booking-flow>
+  <div class="progress-rail">
+    <div class="progress-step active" data-progress-step>
+      <div class="circle">1</div><div class="label">Specialty</div>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-step" data-progress-step>
+      <div class="circle">2</div><div class="label">Doctor</div>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-step" data-progress-step>
+      <div class="circle">3</div><div class="label">Time</div>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-step" data-progress-step>
+      <div class="circle">4</div><div class="label">Your details</div>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-step" data-progress-step>
+      <div class="circle">5</div><div class="label">Payment</div>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-step" data-progress-step>
+      <div class="circle">✓</div><div class="label">Confirmed</div>
+    </div>
+  </div>
+
+  <div class="row g-4 align-items-start booking-shell">
+    <div class="col-lg-8">
+    <div class="card">
+
+      <!-- STEP 1: SPECIALTY -->
+      <div class="form-step active">
+        <div class="step-panel">
+          <h2>What kind of care do you need?</h2>
+          <p class="step-sub">Choose a specialty to see matching doctors.</p>
+          <div class="row g-3 spec-grid">
+            <div class="col-6 col-md-4">
+            <div class="spec-card" data-spec-card data-spec="Cardiology">
+              <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21C12 21 4 14.5 4 9a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 5.5-8 12-8 12Z"/></svg></div>
+              <span>Cardiology</span>
+            </div>
+            </div>
+            <div class="col-6 col-md-4">
+            <div class="spec-card" data-spec-card data-spec="Dermatology">
+              <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg></div>
+              <span>Dermatology</span>
+            </div>
+            </div>
+            <div class="col-6 col-md-4">
+            <div class="spec-card" data-spec-card data-spec="Pediatrics">
+              <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4a4 4 0 0 1 4 4c0 3-4 8-4 8s-4-5-4-8a4 4 0 0 1 4-4Z"/></svg></div>
+              <span>Pediatrics</span>
+            </div>
+            </div>
+            <div class="col-6 col-md-4">
+            <div class="spec-card" data-spec-card data-spec="Orthopedics">
+              <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M4 12a3 3 0 1 1 0-6M4 12a3 3 0 1 0 0 6M20 12a3 3 0 1 0 0-6M20 12a3 3 0 1 1 0 6"/></svg></div>
+              <span>Orthopedics</span>
+            </div>
+            </div>
+            <div class="col-6 col-md-4">
+            <div class="spec-card" data-spec-card data-spec="Neurology">
+              <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3a3 3 0 0 0-3 3v1a3 3 0 0 0 0 6v1a3 3 0 0 0 3 3M15 3a3 3 0 0 1 3 3v1a3 3 0 0 1 0 6v1a3 3 0 0 1-3 3"/></svg></div>
+              <span>Neurology</span>
+            </div>
+            </div>
+            <div class="col-6 col-md-4">
+            <div class="spec-card" data-spec-card data-spec="Dentistry">
+              <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c-3 0-5 2-5 5 0 3 1 4 1 8 0 2 1 3 2 3s1-3 2-5 1-2 2 0 1 5 2 5 2-1 2-3c0-4 1-5 1-8 0-3-2-5-5-5Z"/></svg></div>
+              <span>Dentistry</span>
+            </div>
+            </div>
+            <div class="col-6 col-md-4">
+            <div class="spec-card" data-spec-card data-spec="Gynecology">
+              <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/></svg></div>
+              <span>Gynecology</span>
+            </div>
+            </div>
+            <div class="col-6 col-md-4">
+            <div class="spec-card" data-spec-card data-spec="General Medicine">
+              <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div>
+              <span>General Medicine</span>
+            </div>
+            </div>
+            <div class="col-6 col-md-4">
+            <div class="spec-card" data-spec-card data-spec="Psychiatry">
+              <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 0 0-5 5c0 2 1 3 1 5v2a4 4 0 0 0 8 0v-2c0-2 1-3 1-5a5 5 0 0 0-5-5Z"/></svg></div>
+              <span>Psychiatry</span>
+            </div>
+            </div>
+          </div>
+          <div class="form-nav" style="justify-content:flex-end;">
+            <button type="button" class="btn btn-primary" data-next-step>Continue</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2: DOCTOR -->
+      <div class="form-step">
+        <div class="step-panel">
+          <h2>Choose your doctor</h2>
+          <p class="step-sub">Matched to the specialty you picked.</p>
+          <div class="doc-select-list" data-doc-select-list></div>
+          <div class="form-nav">
+            <button type="button" class="btn btn-ghost" data-prev-step>Back</button>
+            <button type="button" class="btn btn-primary" data-next-step>Continue</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3: DATE & TIME -->
+      <div class="form-step">
+        <div class="step-panel">
+          <h2>Pick a date and time</h2>
+          <p class="step-sub">All times shown in your local timezone.</p>
+          <div class="widget-label">Date</div>
+          <div class="date-picker" style="margin-bottom:20px;">
+            <div class="date-chip" data-appt-date><div class="d">Mon</div><div class="n">14</div></div>
+            <div class="date-chip" data-appt-date><div class="d">Tue</div><div class="n">15</div></div>
+            <div class="date-chip" data-appt-date><div class="d">Wed</div><div class="n">16</div></div>
+            <div class="date-chip" data-appt-date><div class="d">Thu</div><div class="n">17</div></div>
+            <div class="date-chip" data-appt-date><div class="d">Fri</div><div class="n">18</div></div>
+            <div class="date-chip" data-appt-date><div class="d">Sat</div><div class="n">19</div></div>
+          </div>
+          <div class="widget-label">Time</div>
+          <div class="time-picker">
+            <button type="button" class="time-chip" data-appt-time>9:00 AM</button>
+            <button type="button" class="time-chip" data-appt-time>9:30 AM</button>
+            <button type="button" class="time-chip" data-appt-time disabled>10:00 AM</button>
+            <button type="button" class="time-chip" data-appt-time>11:15 AM</button>
+            <button type="button" class="time-chip" data-appt-time>1:30 PM</button>
+            <button type="button" class="time-chip" data-appt-time disabled>2:00 PM</button>
+            <button type="button" class="time-chip" data-appt-time>3:45 PM</button>
+            <button type="button" class="time-chip" data-appt-time>5:00 PM</button>
+          </div>
+          <div class="form-nav">
+            <button type="button" class="btn btn-ghost" data-prev-step>Back</button>
+            <button type="button" class="btn btn-primary" data-next-step>Continue</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 4: PATIENT DETAILS -->
+      <div class="form-step">
+        <div class="step-panel">
+          <h2>Your details</h2>
+          <p class="step-sub">We'll send your confirmation and reminders here.</p>
+          <div class="field">
+            <label for="name">Full name</label>
+            <input class="form-control" type="text" id="name" name="name" placeholder="Jordan Taylor" autocomplete="name">
+            <span class="error-msg">Please enter your full name.</span>
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input class="form-control" type="email" id="email" name="email" placeholder="jordan@email.com" autocomplete="email">
+            <span class="error-msg">Please enter a valid email address.</span>
+          </div>
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input class="form-control" type="tel" id="phone" name="phone" placeholder="(555) 123-4567" autocomplete="tel">
+            <span class="error-msg">Enter a valid phone number.</span>
+          </div>
+          <div class="field">
+            <label for="reason">Reason for visit <span class="hint">(optional)</span><span class="char-count" data-char-count="reason-count">0/300</span></label>
+            <textarea class="form-control" id="reason" name="reason" placeholder="Briefly describe your symptoms or reason for the visit" maxlength="300"></textarea>
+          </div>
+          <div class="form-nav">
+            <button type="button" class="btn btn-ghost" data-prev-step>Back</button>
+            <button type="button" class="btn btn-primary" data-next-step>Confirm booking</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 5: PAYMENT -->
+      <div class="form-step">
+        <div class="step-panel">
+          <h2>Choose how you'd like to pay</h2>
+          <p class="step-sub">Your consultation fee is collected securely before the visit is confirmed.</p>
+
+          <div class="row g-3 payment-method-grid" data-payment-methods>
+            <div class="col-12 col-md-4">
+            <div class="payment-method-card" data-pay-method="razorpay">
+              <div class="pm-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+              <h4>Pay online</h4>
+              <p>Cards, UPI, netbanking & wallets — via Razorpay</p>
+            </div>
+            </div>
+            <div class="col-12 col-md-4">
+            <div class="payment-method-card" data-pay-method="qr">
+              <div class="pm-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM20 14h1v1h-1zM14 20h1v1h-1zM17 17h4v4h-4z"/></svg></div>
+              <h4>Scan &amp; pay</h4>
+              <p>Scan a UPI QR code with any payment app</p>
+            </div>
+            </div>
+            <div class="col-12 col-md-4">
+            <div class="payment-method-card" data-pay-method="cash">
+              <div class="pm-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+              <h4>Pay at visit</h4>
+              <p>Cash or card at the clinic</p>
+            </div>
+            </div>
+          </div>
+
+          <!-- RAZORPAY ONLINE PAYMENT -->
+          <div class="payment-detail-panel" data-pay-detail="razorpay" style="display:none;">
+            <h4>Pay securely with Razorpay</h4>
+            <p class="cod-note">You'll pay <strong data-razorpay-amount>₹—</strong> in the next step. Clicking confirm opens Razorpay's secure checkout — your card/UPI details are never seen by this site.</p>
+          </div>
+
+          <!-- QR CODE PAYMENT -->
+          <div class="payment-detail-panel" data-pay-detail="qr" style="display:none;">
+            <h4>Scan &amp; pay</h4>
+            <p class="cod-note">You'll pay <strong data-qr-amount>₹—</strong>. Click confirm below to generate a QR code, then scan it with any UPI app (Google Pay, PhonePe, Paytm...) to pay.</p>
+            <div data-qr-box style="display:none; text-align:center; margin-top:14px;">
+              <img data-qr-image alt="Scan this QR code to pay" style="width:220px; height:220px; border:1px solid var(--border-color,#ddd); border-radius:8px; padding:8px; background:#fff;" onerror="this.style.display='none'; const s=document.querySelector('[data-qr-status]'); if(s) s.textContent='Couldn\'t load the QR image. Please try again.';" />
+              <p data-qr-status style="margin-top:10px; font-weight:500;">Waiting for payment…</p>
+            </div>
+          </div>
+
+          <!-- CASH AT VISIT -->
+          <div class="payment-detail-panel" data-pay-detail="cash" style="display:none;">
+            <h4>Pay at your visit</h4>
+            <p class="cod-note">No payment is collected now. Please bring cash or a card to settle the consultation fee (<strong data-cash-amount>₹—</strong>) at the clinic reception before your appointment.</p>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn btn-ghost" data-prev-step>Back</button>
+            <button type="button" class="btn btn-primary" data-pay-confirm-btn disabled>Select a payment method</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 6: CONFIRMATION -->
+      <div class="form-step">
+        <div class="step-panel confirm-box" data-confirm-box>
+          <div class="confirm-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          </div>
+          <h2>You're all set.</h2>
+          <p>Your appointment with <strong data-confirm-doctor></strong> is booked for <strong data-confirm-datetime></strong>. A confirmation has been sent to your email.</p>
+          <div class="confirm-code" data-confirm-code></div>
+
+          <div class="pay-status-banner" data-confirm-pay-banner style="margin-top:20px;"></div>
+
+          <div class="invoice-actions">
+            <button type="button" class="btn btn-primary" data-download-invoice-btn>Download invoice (PDF)</button>
+          </div>
+          <p style="font-size:12.5px; color:var(--ink-faint); margin-top:10px;">Your prescription will be available to download from your dashboard once the doctor completes your visit.</p>
+
+          <div style="margin-top:22px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+            <a href="dashboard.html" class="btn btn-primary">Go to dashboard</a>
+            <a href="index.html" class="btn btn-ghost">Back to home</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+    <!-- SUMMARY SIDEBAR -->
+    <div class="col-lg-4">
+    <div class="card summary-card" data-booking-summary>
+      <h3>Booking summary</h3>
+      <div class="summary-row"><span>Doctor</span><span data-sum-doctor>—</span></div>
+      <div class="summary-row"><span>Specialty</span><span data-sum-spec>—</span></div>
+      <div class="summary-row"><span>Date</span><span data-sum-date>—</span></div>
+      <div class="summary-row"><span>Time</span><span data-sum-time>—</span></div>
+      <div class="price">
+        <span style="font-size:13.5px; color:var(--ink-faint);">Estimated fee</span>
+        <strong data-sum-fee>₹—</strong>
+      </div>
+      <p style="font-size:12.5px; color:var(--ink-faint);">Final cost may vary based on insurance coverage. You'll choose how to pay in the next step.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <span>© 2026 Meridian Health. Frontend demo — no real medical data.</span>
+      <span>Built for demonstration purposes only.</span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="data.js"></script>
+<script src="pdf-utils.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

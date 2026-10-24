@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meridian Health — Book doctors, manage care, all in one place</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 32 32" fill="none">
+        <rect width="32" height="32" rx="9" fill="#1F5C4E"/>
+        <path d="M6 17h4l2.5-7 4 14 2.5-7H26" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      Meridian
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="doctors.html">Doctors</a></li>
+      <li><a href="pharmacy.html">Pharmacy</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="login.html?role=doctor" class="nav-doctor-link">Doctor login</a>
+      <a href="login.html" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="login.html?tab=register" class="btn btn-primary btn-sm">Get started</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="hero" id="main">
+  <div class="container">
+    <div class="row align-items-center g-5">
+    <div class="col-lg-7">
+      <span class="eyebrow">Online care, on your schedule</span>
+      <h1>Healthcare that keeps <em>pace</em> with your life.</h1>
+      <p class="sub">Find the right doctor, book a visit in under a minute, and keep every prescription and result in one calm dashboard.</p>
+      <div class="hero-actions">
+        <a href="appointment.html" class="btn btn-primary">Book an appointment</a>
+        <a href="doctors.html" class="btn btn-ghost">Browse doctors</a>
+      </div>
+      <div class="hero-trust">
+        <div class="avatars"><span>JM</span><span>AO</span><span>RL</span><span>+</span></div>
+        <span>Joined by 42,000+ patients across 30 clinics</span>
+      </div>
+      <div class="hero-stats">
+        <div><strong>9</strong><span>Specialties</span></div>
+        <div><strong>120+</strong><span>Verified doctors</span></div>
+        <div><strong>4.9★</strong><span>Average rating</span></div>
+        <div><strong>24/7</strong><span>Booking access</span></div>
+      </div>
+    </div>
+
+    <div class="col-lg-5">
+    <div class="book-widget" data-hero-widget>
+      <div class="book-widget-head">
+        <h3>Quick booking</h3>
+        <span class="live-dot">Live slots</span>
+      </div>
+
+      <div class="widget-label">Choose a doctor</div>
+      <div class="doc-picker">
+        <div class="doc-chip selected"><div class="avatar">AO</div><span>Osei</span></div>
+        <div class="doc-chip"><div class="avatar">RM</div><span>Menon</span></div>
+        <div class="doc-chip"><div class="avatar">LV</div><span>Voss</span></div>
+        <div class="doc-chip"><div class="avatar">DK</div><span>Kim</span></div>
+      </div>
+
+      <div class="widget-label">Pick a day</div>
+      <div class="date-picker">
+        <div class="date-chip selected"><div class="d">Mon</div><div class="n">14</div></div>
+        <div class="date-chip"><div class="d">Tue</div><div class="n">15</div></div>
+        <div class="date-chip"><div class="d">Wed</div><div class="n">16</div></div>
+        <div class="date-chip"><div class="d">Thu</div><div class="n">17</div></div>
+        <div class="date-chip"><div class="d">Fri</div><div class="n">18</div></div>
+      </div>
+
+      <div class="widget-label">Available times</div>
+      <div class="time-picker">
+        <button type="button" class="time-chip selected">9:30 AM</button>
+        <button type="button" class="time-chip">11:00 AM</button>
+        <button type="button" class="time-chip" disabled>1:15 PM</button>
+        <button type="button" class="time-chip">3:45 PM</button>
+        <button type="button" class="time-chip">5:00 PM</button>
+      </div>
+
+      <div class="book-summary" data-summary></div>
+      <div style="margin-top:18px;">
+        <button type="button" class="btn btn-primary btn-block" data-hero-book>Continue booking</button>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="ekg-divider">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path class="ekg-pulse-line" fill="none" stroke-width="2"
+        d="M0 30 L210 30 L235 30 L252 6 L268 54 L284 30 L980 30 L995 30 L1012 12 L1028 48 L1044 30 L1200 30"/>
+    </svg>
+  </div>
+</div>
+
+<section class="trust-strip">
+  <div class="container trust-strip-inner">
+    <span class="label">Trusted alongside</span>
+    <div class="trust-logos">
+      <span>Northfield Clinics</span>
+      <span>CedarCare</span>
+      <span>Bluewell</span>
+      <span>Harbor Medical</span>
+      <span>Aster Group</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What we offer</span>
+      <h2>Everything a visit needs, before you even arrive.</h2>
+      <p class="sub">From first symptom to follow-up, each step is designed to remove friction — not add another form to fill out.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-3">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21C12 21 4 14.5 4 9a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 5.5-8 12-8 12Z"/></svg>
+        </div>
+        <h3>Same-day bookings</h3>
+        <p>Filter by specialty, insurance, and availability to find a slot that works today.</p>
+      </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+        <h3>Smart scheduling</h3>
+        <p>Automatic reminders and reschedules so nothing slips through the cracks.</p>
+      </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        </div>
+        <h3>Verified specialists</h3>
+        <p>Every doctor on Meridian is licensed and independently credential-checked.</p>
+      </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+        </div>
+        <h3>Vitals & records</h3>
+        <p>Prescriptions, results, and visit history live in a single patient dashboard.</p>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="doctors" style="padding-top:0;">
+  <div class="container">
+    <div class="section-head" style="display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap;">
+      <div>
+        <span class="eyebrow">Meet the team</span>
+        <h2 style="margin-top:14px;">Doctors people actually recommend.</h2>
+      </div>
+      <a href="doctors.html" class="btn btn-ghost">View all doctors</a>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-3">
+      <div class="doc-card">
+        <div class="doc-photo">AO</div>
+        <div class="doc-info">
+          <h3>Dr. Amara Osei</h3>
+          <div class="spec">Cardiology</div>
+          <div class="meta"><span class="rating">★ 4.9</span><span>12 yrs exp.</span></div>
+        </div>
+      </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+      <div class="doc-card">
+        <div class="doc-photo">LV</div>
+        <div class="doc-info">
+          <h3>Dr. Lena Voss</h3>
+          <div class="spec">Pediatrics</div>
+          <div class="meta"><span class="rating">★ 5.0</span><span>15 yrs exp.</span></div>
+        </div>
+      </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+      <div class="doc-card">
+        <div class="doc-photo">SA</div>
+        <div class="doc-info">
+          <h3>Dr. Sofia Alvarez</h3>
+          <div class="spec">Gynecology</div>
+          <div class="meta"><span class="rating">★ 4.9</span><span>13 yrs exp.</span></div>
+        </div>
+      </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+      <div class="doc-card">
+        <div class="doc-photo">JW</div>
+        <div class="doc-info">
+          <h3>Dr. James Whitfield</h3>
+          <div class="spec">General Medicine</div>
+          <div class="meta"><span class="rating">★ 4.8</span><span>16 yrs exp.</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--surface-sunken);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Three steps between "not feeling great" and "seen."</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-lg-4 step">
+        <span class="num">01</span>
+        <h3>Tell us what's going on</h3>
+        <p>Pick a specialty or symptom area, and we'll surface doctors who fit — location, insurance, and language included.</p>
+      </div>
+      <div class="col-12 col-lg-4 step">
+        <span class="num">02</span>
+        <h3>Choose a time that fits</h3>
+        <p>Real-time availability means no back-and-forth. Grab a slot today or plan weeks ahead.</p>
+      </div>
+      <div class="col-12 col-lg-4 step">
+        <span class="num">03</span>
+        <h3>Show up, ready</h3>
+        <p>Confirmation, reminders, and a visit summary land in your dashboard automatically.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Patient stories</span>
+      <h2>Care that felt like it noticed them.</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-lg-4">
+      <div class="testimonial">
+        <p class="quote">"I booked a same-day dermatology visit during my lunch break. No calling, no hold music."</p>
+        <div class="testimonial-author">
+          <div class="avatar">JT</div>
+          <div><strong>Jordan T.</strong><span>Patient since 2024</span></div>
+        </div>
+      </div>
+      </div>
+      <div class="col-12 col-lg-4">
+      <div class="testimonial">
+        <p class="quote">"My son's pediatrician updates his vitals right after each visit. I finally have one place to check."</p>
+        <div class="testimonial-author">
+          <div class="avatar">RN</div>
+          <div><strong>Riya N.</strong><span>Parent, two kids</span></div>
+        </div>
+      </div>
+      </div>
+      <div class="col-12 col-lg-4">
+      <div class="testimonial">
+        <p class="quote">"The reminder texts alone have saved me from missing three appointments this year."</p>
+        <div class="testimonial-author">
+          <div class="avatar">CM</div>
+          <div><strong>Carlos M.</strong><span>Patient since 2023</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container" style="padding-bottom:100px;">
+  <div class="cta-band">
+    <div>
+      <span class="eyebrow" style="color:var(--accent);">Ready when you are</span>
+      <h2 style="margin-top:14px;">Your next appointment is two minutes away.</h2>
+      <p class="sub">Create a free account and book your first visit today — no paperwork at the door.</p>
+    </div>
+    <div class="cta-band-actions">
+      <a href="appointment.html" class="btn btn-accent">Book an appointment</a>
+      <a href="login.html?tab=register" class="btn btn-ghost" style="border-color:rgba(255,255,255,0.3); color:#fff;">Create account</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4 footer-grid">
+      <div class="col-6 col-lg-3 footer-brand">
+        <div class="logo" style="color:#fff;">
+          <svg class="logo-mark" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="9" fill="#E8A33D"/>
+            <path d="M6 17h4l2.5-7 4 14 2.5-7H26" stroke="#123C32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          Meridian
+        </div>
+        <p>Care that meets you where you are — book, consult, and manage your health in one calm place.</p>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="doctors.html">Find a doctor</a></li>
+          <li><a href="appointment.html">Book appointment</a></li>
+          <li><a href="dashboard.html">Patient dashboard</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help center</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Meridian Health. Frontend demo — no real medical data.</span>
+      <span>Built for demonstration purposes only.</span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
